@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Today in Ukraine</title>
+  <meta name="description" content="Holidays & dates (UA/EN/TR) — Ukraine-first + world days." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">🇺🇦 Today in Ukraine</div>
+
+    <div class="controls">
+      <div class="lang">
+        <button class="chip" data-lang="uk">UA</button>
+        <button class="chip" data-lang="en">EN</button>
+        <button class="chip" data-lang="tr">TR</button>
+      </div>
+
+      <nav class="nav">
+        <button id="prevBtn" class="btn ghost">←</button>
+        <button id="todayBtn" class="btn">Today</button>
+        <button id="nextBtn" class="btn ghost">→</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 id="dateTitle">...</h1>
+    <p class="muted" id="weekdayTitle"></p>
+
+    <!-- Filters -->
+    <section class="panel" style="padding:12px; margin-top:12px;">
+      <div class="filters">
+        <input id="searchBox" placeholder="Search… (cat / незалежність / bayram)" />
+        <select id="scopeFilter">
+          <option value="all">All</option>
+          <option value="ua">🇺🇦 Ukraine</option>
+          <option value="tr">🇹🇷 Turkey</option>
+          <option value="us">🇺🇸 USA</option>
+          <option value="eu">🇪🇺 Europe</option>
+          <option value="jp">🇯🇵 Japan</option>
+          <option value="kr">🇰🇷 Korea</option>
+          <option value="eg">🇪🇬 Egypt</option>
+          <option value="global">🌍 Global</option>
+        </select>
+
+        <select id="typeFilter">
+          <option value="all">All types</option>
+          <option value="public">Public</option>
+          <option value="observance">Observance</option>
+          <option value="historical">Historical</option>
+          <option value="cultural">Cultural</option>
+          <option value="religious">Religious</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="panel">
+      <div class="panelHead">
+        <h2 id="eventsTitle">Events</h2>
+        <span id="countBadge" class="badge"></span>
+      </div>
+      <div id="events"></div>
+      <p class="muted tiny" id="note"></p>
+    </section>
+
+    <!-- Month -->
+    <section class="panel">
+      <div class="panelHead">
+        <h2 id="monthTitle">Month</h2>
+        <div class="monthNav">
+          <button id="prevMonthBtn" class="btn ghost">←</button>
+          <button id="nextMonthBtn" class="btn ghost">→</button>
+        </div>
+      </div>
+      <div class="weekdays" id="weekdays"></div>
+      <div id="monthGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <span class="muted" id="footerText">Data pack v1</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

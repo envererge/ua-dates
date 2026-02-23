@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Today</title>
+</head>
+<body>
+  <script>
+    (function(){
+      const lang = (localStorage.getItem("lang") || (navigator.language || "uk").slice(0,2)).toLowerCase();
+      const allowed = ["uk","en","tr"];
+      const use = allowed.includes(lang) ? lang : "uk";
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = String(now.getMonth()+1).padStart(2,"0");
+      const d = String(now.getDate()).padStart(2,"0");
+      location.replace("https://example.com/" + use + "/" + y + "/" + m + "/" + d + "/");
+    })();
+  </script>
+  <noscript>
+    <p>Open: <a href="https://example.com/uk/">https://example.com/uk/</a></p>
+  </noscript>
+</body>
+</html>

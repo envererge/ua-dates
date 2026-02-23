@@ -1,0 +1,8 @@
+{
+  "name": "ukraine-dates-seo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node seo-build/build.mjs"
+  }
+}
