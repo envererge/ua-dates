@@ -1,7 +1,7 @@
 // =====================
 // CONFIG
 // =====================
-const DATA_FILE = "data/world_10000_event_pack_OPTION_A_v2_verified_mix_2026.json";
+const DATA_FILE = "data/world_10000_event_pack_OPTION_A_framework_2026.json";
 
 // =====================
 // STATE
