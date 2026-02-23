@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-  "build": "node seo-build/build.mjs && xcopy data dist\\data /E /I /Y"
+  "build": "node seo-build/build.mjs"
 }
 }
