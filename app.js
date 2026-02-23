@@ -79,7 +79,7 @@ function weightScope(scope) {
 
 function applyFilters(list) {
   return list
-    .filter(e => e.verified === true) // 👈 ADD THIS LINE
+    .filter(e => e.verified === true) 
     .filter(e => (SCOPE_FILTER === "all" ? true : e.scope === SCOPE_FILTER))
     .filter(e => (TYPE_FILTER === "all" ? true : (e.type || "other") === TYPE_FILTER))
     .filter(e => {
